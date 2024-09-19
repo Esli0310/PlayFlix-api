@@ -33,4 +33,14 @@ public class UsuarioService implements IUsuarioService {
     public void delete(Integer id) {
         usuarioRepository.deleteById(id);
     }
+
+    @Override
+    public List<Usuario> findByUsernameOrEmail(String username, String email){
+        return usuarioRepository.findByUsernameOrEmail(username, email);
+    }
+
+    @Override
+    public List<Usuario> findRepeated(String username, String email,Integer id) {
+        return usuarioRepository.findRepeated(username, email, id);
+    }
 }
