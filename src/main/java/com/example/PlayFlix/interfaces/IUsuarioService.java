@@ -14,4 +14,8 @@ public interface IUsuarioService {
 
     void delete(Integer id);
 
+    List<Usuario> findByUsernameOrEmail(String username, String email);
+
+    List<Usuario> findRepeated(String username, String email, Integer id);
+
 }
